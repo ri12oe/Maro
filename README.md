@@ -33,6 +33,8 @@ To check type this out on the terminal:
 ### find out -name "Maro.class"
 
 If it says "out/Maro.class" , then run java -cp out Maro
+
+
 If it says "out/maro/Maro.class" , then run java -cp out maro.Maro
 
 
