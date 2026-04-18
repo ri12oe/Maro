@@ -1,0 +1,3 @@
+test = ["APPLE", "GREEN", "EGGS]
+
+print(pop(test))

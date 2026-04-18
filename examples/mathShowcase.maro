@@ -1,0 +1,96 @@
+# --- Math Showcase ---
+
+print("Basic:")
+
+let a = 24
+let b = 7
+
+print("a = " + str(a) + ",  b = " + str(b))
+print("a + b  = " + str(a + b))
+print("a - b  = " + str(a - b))
+print("a * b  = " + str(a * b))
+print("a / b  = " + str(a / b))
+print("a % b  = " + str(a % b))   # remainder: 3
+print("a^2    = " + str(pow(a, 2)))
+print("sqrt(a)= " + str(sqrt(a)))
+print("")
+
+print("\n")
+
+
+
+print("Built-In Math Functions:")
+
+let nums = [3.7, -2.1, 9.5, -0.3, 6.8]
+print("Original: " + str(nums))
+
+# abs - absolute value of each
+let absNums = []
+for (n in nums) {
+    push(absNums, abs(n))
+}
+print("abs():    " + str(absNums))
+
+# floor and ceil
+let floorNums = []
+let ceilNums = []
+for (n in nums) {
+    push(floorNums, floor(n))
+    push(ceilNums, ceil(n))
+}
+print("floor():  " + str(floorNums))
+print("ceil():   " + str(ceilNums))
+print("")
+
+
+print("\n")
+
+print("Power and Rots:")
+
+# Powers of 2
+let powers = []
+let p = 0
+while (p <= 10) {
+    push(powers, pow(2, p))
+    p = p + 1
+}
+print("Powers of 2: " + str(powers))
+
+# Square roots of perfect squares
+let squares = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+print("Perfect squares and their roots:")
+for (s in squares) {
+    print("  sqrt(" + str(s) + ") = " + str(sqrt(s)))
+}
+print("")
+
+
+print("\n")
+
+
+print("GCD and LCM")
+
+# Greatest Common Divisor using Euclid's algorithm
+fun gcd(a, b) {
+    while (b != 0) {
+        let temp = b
+        b = a % b
+        a = temp
+    }
+    return a
+}
+
+# Least Common Multiple
+fun lcm(a, b) {
+    return (a * b) / gcd(a, b)
+}
+
+let pairs = [[12, 8], [100, 75], [17, 13], [48, 36]]
+for (pair in pairs) {
+    let x = pair[0]
+    let y = pair[1]
+    print("gcd(" + str(x) + ", " + str(y) + ") = " + str(gcd(x, y)) +
+          "   lcm = " + str(lcm(x, y)))
+}
+print("")
+

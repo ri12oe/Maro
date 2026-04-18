@@ -1,0 +1,104 @@
+# --- Functions ---
+fun greet(who) {
+    return "Hello, " + who + "!"
+}
+print(greet("world"))
+
+
+print("\n")
+
+
+# --- If / Else ---
+fun classify(n) {
+    if (n > 0) {
+        return "positive"
+    } else if (n < 0) {
+        return "negative"
+    } else {
+        return "zero"
+    }
+}
+print(classify(5))
+print(classify(-3))
+print(classify(0))
+
+
+print("\n")
+
+
+
+# --- While Loop ---
+let count = 1
+while (count <= 5) {
+    print("Count: " + str(count))
+    count = count + 1
+}
+
+print("\n")
+
+
+# --- Lists ---
+let fruits = ["apple", "banana", "cherry"]
+push(fruits, "date") # append the item to the end of the list
+print("Fruits: " + str(fruits))
+for (fruit in fruits) {
+    print("  - " + upper(fruit)) # return the string in UPPERCASE
+}
+
+
+print("\n")
+
+
+# --- Maps ---
+let person = {name: "Rio", age: 20, language: "Maro"}
+print("Name: " + person.name)
+print("Age: " + str(person.age))
+
+
+print("\n")
+
+
+# --- Recursion ---
+fun factorial(n) {
+    if (n <= 1) { return 1 }
+    return n * factorial(n - 1)
+}
+print("5! = " + str(factorial(5)))
+
+
+print("\n")
+
+
+
+# --- Fibonacci ---
+fun fib(n) {
+    if (n <= 1) { return n }
+    return fib(n - 1) + fib(n - 2)
+}
+let i = 0
+let results = []
+while (i < 8) {
+    push(results, fib(i))
+    i = i + 1
+}
+print("Fibonacci: " + str(results))
+
+
+print("\n")
+
+
+
+# --- FizzBuzz ---
+let n = 1
+while (n <= 15) {
+    if (n % 15 == 0) {
+        print("FizzBuzz")
+    } else if (n % 3 == 0) {
+        print("Fizz")
+    } else if (n % 5 == 0) {
+        print("Buzz")
+    } else {
+        print(str(n))
+    }
+    n = n + 1
+}

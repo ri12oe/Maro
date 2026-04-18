@@ -1,0 +1,16 @@
+print("Division by Zero)
+fun safeDivide(a, b) {
+    if (b == 0) {
+        return "Error: cannot divide " + str(a) + " by zero!"
+    }
+    return a / b
+}
+
+print(str(safeDivide(10, 2)))    # works fine: 5
+print(str(safeDivide(7, 0)))     # caught: error message
+print(str(safeDivide(100, 4)))   # works fine: 25
+print("")
+
+
+print("\n")
+
