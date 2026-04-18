@@ -10,19 +10,19 @@ The design is based on Python, which is great for beginners to test Maro out! Th
 
 This command finds every Java file within your project's subdirectories and passes them all to the compiler at once to ensure they are built together. By using -d out, it automatically organizes the compiled .class files into a clean folder structure that reflects your package names. Once type, a new folder will appear called "out".
 
-javac -d out $(find src/main/java/maro -name "*.java")
+### javac -d out $(find src/main/java/maro -name "*.java")
 
 
 
 If on a folder, then you need to type this out on the terminal
 
-java -cp out Maro examples/errorsShowcase.maro
+### java -cp out Maro examples/errorsShowcase.maro
 
 
 
 If on a file / out of an folder , then you need to type this out on the terminal
 
-java -cp out Maro outOfFolder.maro
+### java -cp out Maro outOfFolder.maro
 
 
 
@@ -30,7 +30,7 @@ If you wanted to open REPL mode, first you need to check to see where the compil
 
 To check type this out on the terminal:
 
-find out -name "Maro.class"
+### find out -name "Maro.class"
 
 If it says "out/Maro.class" , then run java -cp out Maro
 If it says "out/maro/Maro.class" , then run java -cp out maro.Maro
