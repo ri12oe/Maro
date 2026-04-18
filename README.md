@@ -26,6 +26,8 @@ If on a file / out of an folder , then you need to type this out on the terminal
 
 
 
+## REPL Mode
+
 If you wanted to open REPL mode, first you need to check to see where the compiler is located at:
 
 To check type this out on the terminal:
